@@ -1,6 +1,6 @@
 FROM kenballus/http-garden-soil:latest
 
-RUN apt -y install zsh zsh-syntax-highlighting wget
+RUN apt -y update && apt -y upgrade && apt -y install zsh zsh-syntax-highlighting wget
 
 RUN chsh -s /usr/bin/zsh
 COPY zshrc /root/.zshrc
